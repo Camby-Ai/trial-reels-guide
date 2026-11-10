@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trial Reels Setup Guide &middot; CAMBY Ai</title>
+<meta name="description" content="How to have Claude make and post Instagram trial reels for your business with Ripping: what you need, the five setup steps, what it costs after the free week, and a first week to run.">
+<meta name="theme-color" content="#0B0D12">
+<link rel="icon" href="camby-ai-logo-web.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CAMBY Ai">
+<meta property="og:title" content="Trial Reels Setup Guide">
+<meta property="og:description" content="How to have Claude make and post Instagram trial reels for your business with Ripping: what you need, the five setup steps, what it costs after the free week, and a first week to run.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Trial Reels Setup Guide">
+<meta name="twitter:description" content="How to have Claude make and post Instagram trial reels for your business with Ripping: what you need, the five setup steps, what it costs after the free week, and a first week to run.">
+</head>
+<body>
+<style>
+  /* Layout: single column, left-aligned. Gold hairline rules separate numbered
+     sections, mirroring the CAMBY Ai site's "01 / SECTION" structure. */
+  :root {
+    --bg:        #0B0D12;
+    --panel:     #12161E;
+    --panel-2:   #171C26;
+    --line:      #2A2E3A;
+    --line-gold: #4A3B1E;
+    --gold:      #D8AA57;
+    --gold-dim:  #8A6E38;
+    --text:      #F7F3EB;
+    --muted:     #A49B89;
+    --ink:       #17191D;
+    --font-head: Georgia, "Times New Roman", serif;
+    --font-body: Arial, Helvetica, sans-serif;
+    --font-mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+
+  h1, h2, h3, h4 { font-family: var(--font-head); font-weight: normal; text-wrap: balance; margin: 0; }
+  h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.05; letter-spacing: -0.015em; }
+  h2 { font-size: clamp(27px, 4.4vw, 40px); line-height: 1.15; letter-spacing: -0.01em; }
+  h3 { font-size: clamp(19px, 2.4vw, 23px); line-height: 1.3; }
+  h1 em, h2 em { color: var(--gold); font-style: italic; }
+  p { margin: 0; }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0;
+  }
+  .eyebrow .sep { color: var(--gold-dim); }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    border-bottom: 1px solid var(--line);
+    background: var(--panel);
+  }
+  .masthead .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap; padding-block: 18px;
+  }
+  .masthead img { width: 168px; height: auto; display: block; }
+  .masthead .tag {
+    font-size: 11px; letter-spacing: 0.19em; text-transform: uppercase;
+    color: var(--muted); border-left: 1px solid var(--line-gold); padding-left: 14px;
+  }
+
+  /* ---------- hero ---------- */
+  .hero .wrap { padding-block: clamp(40px, 7vw, 76px); }
+  .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 5vw, 56px); align-items: center; }
+  .hero-copy { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+  .lede { font-size: clamp(16px, 1.9vw, 18.5px); color: var(--muted); max-width: 54ch; }
+  .lede strong { color: var(--text); font-weight: normal; }
+
+  .portrait { position: relative; min-width: 0; }
+  .portrait img { width: 100%; max-width: 100%; height: auto; display: block; border: 1px solid var(--line-gold); }
+  .portrait figcaption {
+    margin-top: 12px; font-size: 11px; letter-spacing: 0.17em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .portrait figcaption b { color: var(--gold); font-weight: normal; }
+
+  .facts { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .fact { flex: 1 1 150px; min-width: 0; padding: 16px 18px 16px 0; }
+  .fact + .fact { border-left: 1px solid var(--line); padding-left: 18px; }
+  .fact dt { font-size: 10.5px; letter-spacing: 0.17em; text-transform: uppercase; color: var(--muted); }
+  .fact dd { margin: 5px 0 0; font-family: var(--font-head); font-size: 21px; color: var(--gold); }
+
+  /* ---------- sections ---------- */
+  section { border-top: 1px solid var(--line); }
+  section .wrap { padding-block: clamp(36px, 5.5vw, 62px); }
+  .sec-head { display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; }
+  .sec-body { display: flex; flex-direction: column; gap: 20px; max-width: 68ch; }
+  .sec-body p { color: var(--muted); }
+  .sec-body p strong { color: var(--text); font-weight: bold; }
+
+  /* ---------- timeline table ---------- */
+  .scroll-x { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; min-width: 440px; font-size: 15px; }
+  caption {
+    text-align: left; font-size: 11px; letter-spacing: 0.17em; text-transform: uppercase;
+    color: var(--muted); padding-bottom: 12px;
+  }
+  th, td { text-align: left; padding: 13px 16px 13px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-family: var(--font-body); font-size: 10.5px; letter-spacing: 0.17em; text-transform: uppercase; color: var(--gold); font-weight: normal; }
+  td.when { color: var(--gold); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  td.what { color: var(--text); }
+  td.note { color: var(--muted); font-size: 14px; }
+  tr.heavy td.when { color: var(--text); background: var(--panel-2); padding-left: 12px; }
+
+  /* ---------- steps ---------- */
+  .step { display: grid; grid-template-columns: 62px 1fr; gap: 0 22px; padding-block: 30px; border-top: 1px solid var(--line); }
+  .step:first-of-type { border-top: 0; }
+  .step-num { font-family: var(--font-head); font-size: 34px; color: var(--gold-dim); line-height: 1; padding-top: 4px; font-variant-numeric: tabular-nums; }
+  .step-body { min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+  .step-body > p { color: var(--muted); max-width: 62ch; }
+  .step-body h3 em { color: var(--gold); font-style: italic; }
+
+  ul.ticks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+  ul.ticks li { position: relative; padding-left: 20px; color: var(--muted); max-width: 62ch; }
+  ul.ticks li::before { content: ""; position: absolute; left: 0; top: 10px; width: 8px; height: 1px; background: var(--gold); }
+  ul.ticks li b { color: var(--text); font-weight: bold; }
+
+  /* ---------- code ---------- */
+  .code { border: 1px solid var(--line); background: var(--panel); }
+  .code-top {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 9px 12px; border-bottom: 1px solid var(--line); background: var(--panel-2);
+  }
+  .code-top span { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .copy {
+    font-family: var(--font-body); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
+    background: transparent; color: var(--gold); border: 1px solid var(--line-gold);
+    padding: 5px 11px; cursor: pointer;
+  }
+  .copy:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+  .copy:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  pre { margin: 0; padding: 14px; overflow-x: auto; font-family: var(--font-mono); font-size: 13.5px; line-height: 1.75; color: var(--text); }
+  pre .c { color: var(--gold-dim); }
+  code { font-family: var(--font-mono); font-size: 0.92em; color: var(--gold); }
+
+  /* ---------- callout ---------- */
+  .callout { border-left: 2px solid var(--gold); background: var(--panel); padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
+  .callout .k { font-size: 10.5px; letter-spacing: 0.17em; text-transform: uppercase; color: var(--gold); }
+  .callout p { color: var(--muted); max-width: 62ch; }
+
+  /* ---------- guardrails ---------- */
+  .rails { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .rail { background: var(--bg); padding: 20px; display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+  .rail dt { font-family: var(--font-head); font-size: 18px; color: var(--text); }
+  .rail dd { margin: 0; color: var(--muted); font-size: 14.5px; }
+  .rail .val { color: var(--gold); font-family: var(--font-mono); font-size: 13px; }
+
+  /* ---------- cta ---------- */
+  .cta { background: var(--panel); border-top: 1px solid var(--line-gold); }
+  .cta .wrap { padding-block: clamp(40px, 6vw, 68px); display: flex; flex-direction: column; gap: 24px; }
+  .cta-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(24px, 4vw, 48px); align-items: start; }
+  .contact { border: 1px solid var(--line-gold); padding: 22px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+  .contact .row { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+  .contact .row dt { font-size: 10.5px; letter-spacing: 0.17em; text-transform: uppercase; color: var(--muted); }
+  .contact .row dd { margin: 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; min-width: 0; }
+  .contact .v { font-family: var(--font-mono); font-size: 14.5px; color: var(--gold); word-break: break-all; }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--line-gold); }
+  a:hover { border-bottom-color: var(--gold); }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ---------- footer ---------- */
+  footer { border-top: 1px solid var(--line); }
+  footer .wrap { padding-block: 34px; display: flex; flex-direction: column; gap: 18px; }
+  footer img.sig { width: 150px; height: auto; opacity: 0.85; }
+  footer p { font-size: 13.5px; color: var(--muted); max-width: 70ch; }
+  .fine { font-size: 12px; color: var(--gold-dim); }
+
+  @media (max-width: 760px) {
+    .hero-grid, .cta-grid { grid-template-columns: 1fr; }
+    .portrait { max-width: 340px; }
+    .step { grid-template-columns: 1fr; gap: 12px; }
+    .step-num { font-size: 26px; padding-top: 0; }
+    .fact + .fact { border-left: 0; padding-left: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <img src="camby-ai-logo-web.png" alt="CAMBY Ai">
+    <div class="tag">Trial Reels &middot; Setup Guide</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">00 <span class="sep">/</span> Trial reels</p>
+      <h1>Test on strangers.<br><em>Post the winner.</em></h1>
+      <p class="lede">In the reel I said Claude can post trial reels for your business, and that I would send
+        you the setup. This is it. The tool is <a href="https://www.getripping.com/">Ripping</a>. You connect
+        your Instagram once, Claude researches the ideas and builds the videos, they go out as trial reels,
+        and <strong>the numbers from each one shape the next.</strong></p>
+      <p class="lede">Ripping is Ben Zogby's product, not mine. What follows is what it takes to get it
+        running, what it costs once the free week ends, and the first week I would run.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Free trial</dt><dd>7 days</dd></div>
+        <div class="fact"><dt>After that</dt><dd>$99 a month</dd></div>
+        <div class="fact"><dt>Runs on</dt><dd>Claude Code</dd></div>
+        <div class="fact"><dt>Instagram</dt><dd>200+ followers</dd></div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">01 <span class="sep">/</span> What a trial reel is</p>
+      <h2>Strangers first.<br><em>Followers later.</em></h2>
+    </div>
+    <div class="sec-body">
+      <p>A trial reel is an Instagram feature. Instagram shows the reel to people who do not follow you, and
+        keeps it off your grid and out of your followers' feeds. If it does well, you share it to everyone. If
+        it does not, your followers never saw it.</p>
+      <p><strong>That is why this works for a business.</strong> You can test five versions of one idea in a
+        week without wearing out the audience you already have.</p>
+      <ul class="ticks">
+        <li><b>Who can use it.</b> A public account with at least 200 followers on a professional account
+          (business or creator), or 1,000 on a personal one.</li>
+        <li><b>When you see numbers.</b> Insights show up within 24 hours of sharing.</li>
+        <li><b>How a winner gets posted.</b> Open the reel, tap View insights, tap Share to everyone. Or turn on
+          Share to everyone automatically in the trial settings and Instagram does it when the reel is
+          performing well.</li>
+        <li><b>What it does not hide.</b> A follower can still run into a trial reel through a DM, an audio
+          page or search. Do not post anything as a trial that you would not post for real.</li>
+      </ul>
+      <p>The rules are Instagram's and they change. The current ones are in the
+        <a href="https://help.instagram.com/1013292530224018/">Instagram Help Center</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">02 <span class="sep">/</span> Before you start</p>
+      <h2>What you need.<br><em>Check the first row.</em></h2>
+    </div>
+    <div class="scroll-x">
+      <table>
+        <caption>What to have ready</caption>
+        <thead>
+          <tr><th scope="col">Item</th><th scope="col">What</th><th scope="col">Note</th></tr>
+        </thead>
+        <tbody>
+          <tr class="heavy">
+            <td class="when">Instagram</td>
+            <td class="what">A public, professional account with 200 or more followers</td>
+            <td class="note">Under 200, trial reels are not available to you yet. Ripping can still post to your feed</td>
+          </tr>
+          <tr>
+            <td class="when">Claude</td>
+            <td class="what">A Claude plan that includes Claude Code</td>
+            <td class="note">Ripping recommends the Max plan. It runs on your own Claude usage</td>
+          </tr>
+          <tr>
+            <td class="when">Ripping</td>
+            <td class="what">An account at getripping.com</td>
+            <td class="note">7 days free, then $99 a month</td>
+          </tr>
+          <tr>
+            <td class="when">A computer</td>
+            <td class="what">One that runs Claude Code</td>
+            <td class="note">Ripping also opens on your phone, for writing scripts, posting and checking views</td>
+          </tr>
+          <tr>
+            <td class="when">Optional</td>
+            <td class="what">A HeyGen avatar</td>
+            <td class="note">Only for the style where your avatar presents. The motion-graphics style needs no face</td>
+          </tr>
+          <tr>
+            <td class="when">Your offer</td>
+            <td class="what">One sentence: what you sell and who buys it</td>
+            <td class="note">The only item on this list the software cannot supply</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">03 <span class="sep">/</span> The setup</p>
+      <h2>Five steps.<br><em>In this order.</em></h2>
+    </div>
+
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-body">
+        <h3>Check your Instagram <em>before you sign up for anything</em></h3>
+        <p>The free week starts the moment you create the Ripping account. Do not spend two of the seven days
+          finding out your account cannot post trial reels.</p>
+        <ul class="ticks">
+          <li><b>Switch to a professional account.</b> It is free and it is in Instagram's settings. Business or creator both work.</li>
+          <li><b>Make sure the account is public.</b></li>
+          <li><b>Count your followers.</b> You need 200 on a professional account.</li>
+          <li><b>Open Account Status in settings.</b> An account with limits on its reach loses trial reels until Instagram can recommend it again.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-body">
+        <h3>Get Claude Code running</h3>
+        <p>Ripping does its work through Claude Code, so that has to be installed and signed in first. Get it
+          from <a href="https://claude.com/claude-code">claude.com/claude-code</a>, sign in with your Claude
+          plan, and ask it one question to confirm it answers.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-body">
+        <h3>Start the Ripping trial</h3>
+        <p>Go to <a href="https://www.getripping.com/">getripping.com</a>, choose Get Ripping and create your
+          account.</p>
+        <div class="callout">
+          <span class="k">Set a reminder for day 6</span>
+          <p>When the trial ends, the paid plan starts by itself. Ripping's refund policy says the charge made
+            when a trial converts is not refundable. If it is not for you, cancel from the Billing page before
+            then.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-body">
+        <h3>Connect Claude and Instagram</h3>
+        <p>Ripping's own onboarding walks you through both. I am not copying their screens here. They ship
+          updates often (version 2.1.2 when I wrote this), so their steps will be more current than mine.</p>
+        <ul class="ticks">
+          <li><b>Connect one Instagram account to start.</b> The plan allows up to ten. One is enough to learn what works.</li>
+          <li><b>Connect the account you sell from.</b> Not a personal one you are nervous about.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">05</div>
+      <div class="step-body">
+        <h3>Make your first reel <em>a trial</em></h3>
+        <p>Ripping works in six stages. For the first reel you only need four of them.</p>
+        <ul class="ticks">
+          <li><b>Swipe.</b> Look through the reels winning in your niche and save the ones closest to what you sell.</li>
+          <li><b>Script.</b> Turn one into a script in your own words. Read every line. Fix anything that is not true about your business.</li>
+          <li><b>Produce.</b> Pick a style and let it build the video.</li>
+          <li><b>Post.</b> Send it out as a trial reel, not to your feed.</li>
+        </ul>
+        <p>The last two stages, Analyze and Repurpose, are for tomorrow, once Instagram has numbers.</p>
+        <div class="callout">
+          <span class="k">Read before it goes out</span>
+          <p>A trial reel is hidden from your followers. It is not hidden from the public. A wrong price or a
+            promise you cannot keep is still out there with your name on it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">04 <span class="sep">/</span> The first week</p>
+      <h2>Seven days.<br><em>One decision.</em></h2>
+    </div>
+    <div class="sec-body">
+      <p>This is the week I would run. The goal is not ten reels a day. It is to know by day 6 whether this is
+        worth $99 a month to your business.</p>
+    </div>
+    <div class="scroll-x" style="margin-top:26px">
+      <table>
+        <caption>A suggested free week</caption>
+        <thead>
+          <tr><th scope="col">Day</th><th scope="col">Do</th><th scope="col">Why</th></tr>
+        </thead>
+        <tbody>
+          <tr class="heavy">
+            <td class="when">Day 1</td>
+            <td class="what">Steps 1 to 4</td>
+            <td class="note">Connected, and one video made</td>
+          </tr>
+          <tr>
+            <td class="when">Day 2</td>
+            <td class="what">One idea, three hooks</td>
+            <td class="note">The same video with three different first lines. Post all three as trials</td>
+          </tr>
+          <tr>
+            <td class="when">Day 3</td>
+            <td class="what">Read the numbers</td>
+            <td class="note">Insights arrive within 24 hours. Look at where people skip, not at the likes</td>
+          </tr>
+          <tr>
+            <td class="when">Days 4 and 5</td>
+            <td class="what">Fix and repeat</td>
+            <td class="note">Keep the best hook, fix the second where people left, post again as trials</td>
+          </tr>
+          <tr>
+            <td class="when">Day 6</td>
+            <td class="what">Decide</td>
+            <td class="note">Share the winner to everyone. Keep Ripping, or cancel from Billing today</td>
+          </tr>
+          <tr>
+            <td class="when">Day 7</td>
+            <td class="what">Trial ends</td>
+            <td class="note">The paid plan starts if you did nothing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sec-body" style="margin-top:22px">
+      <div class="callout">
+        <span class="k">The number to watch</span>
+        <p>Views tell you the hook worked. DMs, calls and form fills tell you the offer worked. A reel with
+          fewer views and three people asking for a quote beat the one with ten times the views and none.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">05 <span class="sep">/</span> The numbers</p>
+      <h2>What it costs.<br><em>All of it.</em></h2>
+    </div>
+    <dl class="rails">
+      <div class="rail">
+        <dt>Ripping</dt>
+        <dd>7 days free, then $99 a month. Up to 250 videos a month and up to 10 Instagram accounts.</dd>
+        <dd class="val">$99 / month after day 7</dd>
+      </div>
+      <div class="rail">
+        <dt>Claude</dt>
+        <dd>Your own Claude plan, billed by Anthropic. Ripping recommends Max. Plans are listed at
+          <a href="https://claude.com/pricing">claude.com/pricing</a>.</dd>
+        <dd class="val">a separate bill</dd>
+      </div>
+      <div class="rail">
+        <dt>Instagram</dt>
+        <dd>Trial reels cost nothing. They are a feature of the app.</dd>
+        <dd class="val">free</dd>
+      </div>
+      <div class="rail">
+        <dt>"Up to 10 a day"</dt>
+        <dd>That is the line from the reel. Ripping's plan allows 250 videos a month, which is about 8 a day.
+          Start with three.</dd>
+        <dd class="val">start with 3</dd>
+      </div>
+      <div class="rail">
+        <dt>Boosting a winner</dt>
+        <dd>The tip from the reel: once a reel passes 100K views, boost it as an ad at $20 a day. That is a
+          rule of thumb, not a promise. It is optional and the budget is yours to set.</dd>
+        <dd class="val">optional</dd>
+      </div>
+      <div class="rail">
+        <dt>Cancelling</dt>
+        <dd>From the Billing page, any time. The charge when the trial converts is not refundable, so decide
+          on day 6.</dd>
+        <dd class="val">cancel by day 6</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">06 <span class="sep">/</span> If you get stuck</p>
+      <h2>Where people <em>actually get stuck</em></h2>
+    </div>
+    <div class="cta-grid">
+      <div class="sec-body">
+        <p>Nobody stalls on connecting Instagram. They stall on the script. A video that makes people buy needs
+          a clear answer to two questions: what do you sell, and who is it for. The tool can test ten hooks a
+          day. It cannot tell you what your offer is.</p>
+        <p>If you want a second set of eyes on that before you spend the free week, that is a conversation I
+          am happy to have.</p>
+        <p><strong>Tell me what you sell and who buys it.</strong> I will tell you what I would test first.</p>
+      </div>
+      <dl class="contact">
+        <div class="row">
+          <dt>Email</dt>
+          <dd><span class="v" id="v-email">mike@mikecamby.com</span>
+            <button class="copy" type="button" data-copy="mike@mikecamby.com">Copy</button></dd>
+        </div>
+        <div class="row">
+          <dt>Text</dt>
+          <dd><span class="v" id="v-phone">747.441.6578</span>
+            <button class="copy" type="button" data-copy="747.441.6578">Copy</button></dd>
+        </div>
+        <div class="row">
+          <dt>Book a time</dt>
+          <dd><a href="https://cal.com/mikecamby">cal.com/mikecamby</a></dd>
+        </div>
+        <div class="row">
+          <dt>The tool</dt>
+          <dd><a href="https://www.getripping.com/">getripping.com</a></dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <img class="sig" src="camby-signature-web.png" alt="Camby">
+    <p>This guide is CAMBY Ai's walkthrough of <a href="https://www.getripping.com/">Ripping</a>, a product by
+      Ben Zogby, and of Instagram's trial reels feature. Prices, limits and eligibility were checked on
+      10 November 2026 against getripping.com and the Instagram Help Center. They change. Confirm on their
+      sites before you pay for anything.</p>
+    <p class="fine">CAMBY Ai &middot; AI solutions for local businesses &middot; Las Vegas, Nevada &middot; More revenue. Less costs.</p>
+    <p class="fine">Nothing here promises views, followers or sales. Not affiliated with or endorsed by Instagram or Meta.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll(".copy").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = btn.dataset.copy;
+      if (!text) {
+        var block = btn.closest(".code");
+        var pre = block && block.querySelector("pre");
+        if (!pre) return;
+        text = pre.innerText.replace(/[ \t]*#.*$/gm, "").trim();
+      }
+      var done = function () {
+        var prev = btn.textContent;
+        btn.textContent = "Copied";
+        setTimeout(function () { btn.textContent = prev; }, 1400);
+      };
+      try {
+        navigator.clipboard.writeText(text).then(done, function () { select(btn, text); });
+      } catch (e) {
+        select(btn, text);
+      }
+    });
+  });
+
+  function select(btn, text) {
+    var holder = btn.closest(".code") || btn.parentElement;
+    var target = holder && (holder.querySelector("pre") || holder.querySelector(".v"));
+    if (!target) return;
+    var range = document.createRange();
+    range.selectNodeContents(target);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    btn.textContent = "Select and copy";
+    setTimeout(function () { btn.textContent = "Copy"; }, 2200);
+  }
+</script>
+
+</body>
+</html>
